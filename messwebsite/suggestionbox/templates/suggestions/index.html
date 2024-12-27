@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>suggestion box</title>
+</head>
+<body>
+    <h1>write your suggestions here</h1>
+    <form action="{% url 'suggestions:index' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit">
+    </form>
+</body>
+</html>
